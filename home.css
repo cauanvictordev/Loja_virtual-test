@@ -1,0 +1,434 @@
+/* Estilizando a seção #home */
+#home {
+  position: relative;
+  background-image: url('tela_inicial.jpg'); /* Substitua pelo caminho correto da imagem */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ocupa a altura total da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* Conteúdo centralizado */
+#home .container {
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Título e subtítulos */
+#home h5 {
+  font-size: 1.2rem;
+  color: #f26522;
+  margin-bottom: 10px;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#home h1 span {
+  color: #f26522; /* Cor laranja */
+  font-weight: bold;
+}
+
+/* Parágrafo */
+#home p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Botão */
+#home button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+#home button:hover {
+  background-color: #f26522;
+}
+
+/* Tornar a página responsiva */
+@media (max-width: 768px) {
+  #home .container {
+    padding: 20px;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home p {
+    font-size: 0.9rem;
+  }
+}
+
+#categories .one img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#categories .one .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+#categories .one:hover .details {
+  cursor: pointer;
+  background-color: var(--main-color-btn-hover);
+}
+
+#categories .one .details button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: none;
+  text-transform: none;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 2.5px;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+
+#categories .one .details button:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#categories .one:nth-child(1) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+#categories .one:nth-child(2) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#categories .one:nth-child(3) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.product img {
+  transition: 0.3s all;
+}
+
+.product:hover img {
+  opacity: 0.7;
+}
+
+/* Efeito do botão aparecendo de baixo */
+.product .buy-btn {
+  background: var(--main-color);
+  transform: translateY(20px);
+  opacity: 0;
+  border-radius: 0.3rem;
+  transition: 0.3s all;
+}
+.product:hover .buy-btn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.product .buy-btn:hover {
+  background-color: var(--main-color-btn-hover);
+}
+
+/* Espaçamento entre as estrelas */
+.stars {
+  padding: 10px 0;
+}
+
+.stars i {
+  font-size: 00.8rem;
+  color: var(--stars-color);
+}
+
+/* Banner com efeito de Parallax: */
+#parallaxBanner {
+  background-image: url("/assets/img/banner/2.jpg");
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 70px center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* Efeito parallax: */
+  background-attachment: fixed;
+}
+
+#parallaxBanner h4 {
+  color: #d8d8d8;
+}
+
+#parallaxBanner h1 {
+  color: white;
+}
+
+#parallaxBanner button {
+  background-color: var(--main-color);
+  color: white;
+}
+
+#parallaxBanner button:hover {
+  background-color: var(--main-color-btn-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#parallaxBanner {
+  background-image: url('modelo.jpg'); /* Substituir pelo caminho correto */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efeito parallax */
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Realça o texto */
+  position: relative;
+  padding: 100px 20px;
+}
+
+#parallaxBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Camada escura para contraste */
+  z-index: 1;
+}
+
+#parallaxBanner .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 20px; /* Deslocamento para a esquerda */
+  animation: slideIn 1.5s ease-out; /* Animação para destaque */
+}
+
+#parallaxBanner h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#parallaxBanner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+#parallaxBanner button.btn-highlight {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#parallaxBanner button.btn-highlight:hover {
+  background-color: #e64a19;
+  transform: scale(1.1); /* Efeito de zoom */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo geral do footer */
+footer {
+  background-color: #222; /* Fundo escuro */
+  color: #fff; /* Texto claro */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer h5 {
+  color: #f76a0c; /* Cor laranja para títulos */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #f76a0c; /* Cor laranja ao passar o mouse */
+}
+
+/* Layout das seções */
+.footer-one {
+  flex: 1; /* Cada coluna ocupa espaço proporcional */
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between; /* Distribui as colunas com espaço entre elas */
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/* Contate-nos */
+footer .footer-one div h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer .footer-one div p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Estilo das imagens do Instagram */
+footer .footer-one img {
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer .footer-one img:hover {
+  transform: scale(1.1); /* Efeito zoom ao passar o mouse */
+}
+
+footer .footer-one .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Copyright e métodos de pagamento */
+footer .copyright {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .copyright img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer .copyright a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+footer .copyright a:hover {
+  color: #f76a0c; /* Cor laranja ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column; /* Colunas empilhadas em telas pequenas */
+    align-items: center;
+  }
+
+  footer .footer-one {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
